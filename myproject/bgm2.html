@@ -1,0 +1,33 @@
+<!DOCTYPE html >
+<html>
+
+<body>
+
+    <p> Choose an option in the drop - down list and display that option.
+    </p>
+    <iframe src="https://open.spotify.com/embed/track/2GAdtSyEO7pNsUNQZudt8H" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    <form>
+        <select id="mySelect" onchange="myFunction()">
+    <option > Apple </option> 
+    <option > Orange </option> 
+    <option > Pineapple </option> 
+    <option > Banana </option> 
+    </select>
+    </form>
+
+    <p id="demo"> </p>
+
+    <script>
+        const secondPlayer = document.querySelector(".JS_BGM2");
+        const selectMusic = document.getElementById("selectMusic");
+
+        function myFunction() {
+            var x = document.getElementById("mySelect");
+            var i = x.selectedIndex;
+            document.getElementById("demo").innerHTML = x.options[i].text;
+        }
+    </script>
+
+</body>
+
+</html>

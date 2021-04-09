@@ -1,0 +1,72 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width">
+
+    <title>My Project</title>
+    <link rel="stylesheet" href="index.css" type="text/css" />
+</head>
+
+<body>
+    <div class="JS_CLOCK">
+        <h1>00:00:00</h1>
+    </div>
+    <form class="JS_FORM form">
+        <input type="text" placeholder="What is your name?" /> (max. 24 characters)
+    </form>
+    <h3 class="JS_GREETINGS greetings"></h3>
+    <form class="JS_BOARD">
+        <input type="text" placeholder="what to do's" />
+    </form>
+    <ul class="JS_LIST"></ul>
+    <span class="JS_WEATHER"></span>
+    <!--
+    <div class="JS_BGM">
+        <audio controls="controls"></audio>
+    </div>
+  -->
+    <form class="JS_BGM2">
+        <select id="selectMusic" oninput="dropdown()">
+        <option>Beatcore & Ashley Apollodor - Burning Bridges [NCS Release].mp3</option>
+        <option>Cadium - Change Your Mind [NCS Release].mp3</option>
+        <option>Culture Code - Fairytale (feat. Amanda Collis) [NCS Release].mp3</option>
+        <option>NIVIRO ft. PollyAnna - Fast Lane [NCS Release].mp3</option>
+        <option>it's different - Outlaw (feat. Miss Mary) [NCS Release].mp3</option>
+      </select>
+        <br><br>
+        <audio controls="controls2"></audio>
+    </form>
+    <script>
+        const secondPlayer = document.querySelector(".JS_BGM2");
+        const selectMusic = document.getElementById("selectMusic");
+
+        function dropdown() {
+            var x = document.getElementById("selectMusic");
+            var i = x.selectedIndex;
+            var selectedMusic = selectMusic.options[i].text;
+            const au = secondPlayer.querySelector("audio");
+            au.innerHTML = `<source src="music/${selectedMusic}" type="audio/mpeg" />`;
+        }
+    </script>
+    <script language="javaScript" src="clock.js"></script>
+    <script language="javaScript" src="greeting.js"></script>
+    <script language="javaScript" src="board.js"></script>
+    <script language="javaScript" src="bgimg.js"></script>
+    <script language="javaScript" src="weather.js"></script>
+    <!--
+      <script language="javaScript" src="bgm.js"></script>
+      <script language="javaScript" src="bgm2.js"></script>
+      <script language="javaScript" src="weathertest.js"></script>
+    <embed loop="true" src="musik/Fairytale.mp3" hidden="true" type="application/x-mplayer2"></embed>
+    -->
+    <br><br>
+    <!--
+        <audio id="player" controls="controls"><source id="song" src="" type="audio/mpeg" /></audio>
+-->
+    <br><br>
+</body>
+
+</html>

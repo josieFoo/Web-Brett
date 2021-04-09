@@ -1,0 +1,48 @@
+body {
+    background-color: rgb(49, 49, 49);
+    color: lightgray;
+    text-shadow: -1px 0 darkgray, 0 1px darkgray, 1px 0 darkgray, 0 -1px darkgray;
+}
+
+h1 {
+    color: lightgray;
+    text-shadow: -1px 0 darkgray, 0 1px darkgray, 1px 0 darkgray, 0 -1px darkgray;
+}
+
+.JS_WEATHER {
+    color: lightgray;
+    text-shadow: -1px 0 darkgray, 0 1px darkgray, 1px 0 darkgray, 0 -1px darkgray;
+}
+
+.clicked {
+    color: gray
+}
+
+.form,
+.greetings {
+    display: none;
+    text-shadow: -1px 0 darkgray, 0 1px darkgray, 1px 0 darkgray, 0 -1px darkgray;
+}
+
+.showing {
+    display: block;
+}
+
+.bgImg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    /*width: 100%;*/
+    height: 100%;
+    z-index: -1;
+    animation: fadeIn 1s linear;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
